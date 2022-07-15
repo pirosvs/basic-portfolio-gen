@@ -1,18 +1,13 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-inquirer
-  .prompt({
-    message: "Enter your GitHub username",
-    name: "username"
-  })
-  .then(function({ github }) {
-    const githubUrl = `https://github.com/${github}`;
-});
+//   .then(function({ github }) {
+//     const githubUrl = `https://github.com/${github}`;
+// });
 
-.then(function({ linkedin }) {
-    const linkedinUrl = `https://linkedin.com/${linkedin}`;
-});
+// .then(function({ linkedin }) {
+//     const linkedinUrl = `https://linkedin.com/${linkedin}`;
+// });
 
 
 // * An HTML document containing the information collected from the prompts should be constructed and written to the
@@ -37,8 +32,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'What languages do you know?',
-        choices: ['HTML', 'CSS', 'JavaScript', 'Python', 'varying C languages'],
+        message: 'What programming languages do you know?',
         name: 'languages',
     },
     {
@@ -54,7 +48,6 @@ inquirer
     {
         type: 'input',
         message: 'What is your preferred method of communication?',
-        choices: ['email', 'phone', 'mail', 'other'],
         name: 'comms',
     },
   ])
@@ -63,8 +56,9 @@ inquirer
   }
   );
 
-  writeFile('portfolio.html', ourString, (err) => {
-    if (err) throw err;
-    console.log(`Congratulations! You have created a portfolio page.`);
-  });
+//   We need to write the html file 
+//   writeFile('portfolio.html', ourString, (err) => {
+//     if (err) throw err;
+//     console.log(`Congratulations! You have created a portfolio page.`);
+//   });
   
